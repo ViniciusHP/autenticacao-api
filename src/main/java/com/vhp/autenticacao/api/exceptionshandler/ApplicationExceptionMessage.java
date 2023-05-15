@@ -1,0 +1,12 @@
+package com.vhp.autenticacao.api.exceptionshandler;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class ApplicationExceptionMessage {
+    private String message;
+}

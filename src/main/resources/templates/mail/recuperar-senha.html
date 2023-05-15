@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            font-size: 16px;
+        }
+        .username {
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px;
+            color: #F9F9F9;
+            background-color: #3b82f6;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid #F9F9F9;
+
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #F9F9F9;
+            color: #3b82f6;
+            border-color: #3b82f6;
+        }
+        .mensagem-atencao {
+            color: #e24c4c;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<p>Olá <span class="username" th:text="${nomeUsuario}"></span>, foi solicitado a recuperação de senha de sua conta.</p>
+<p>Acesse o link a seguir para recuperar sua senha:</p>
+<div class="button-wrapper">
+    <a class="button" th:href="${urlRecuperacao + '/' + token}" >Recuperar senha</a>
+</div>
+<p class="mensagem-atencao">Atenção! Caso você não solicitou a recuperação de senha, não forneça seus dados para nenhum usuário.</p>
+</body>
+</html>

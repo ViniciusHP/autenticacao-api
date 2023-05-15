@@ -1,0 +1,38 @@
+spring:
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: autenticacao
+      uuid-representation: standard
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+
+autenticacao:
+  cors:
+    origem_permitida: http://localhost:4200
+  recuperacao_senha:
+    url: http://localhost:4200/usuarios/redefinir-senha
+    token_validity_minutes: 120
+  jwt:
+    audience: Autenticacao.API
+    issuer: http://localhost:8080
+    access_token_validity_seconds: 10
+    refresh_token_validity_seconds: 604_800
+    secret: Yn2kjibddFAWtnPJ2AFlL8WXmohJMCvigQggaEypa5E=
+    secure: false
+  mail:
+    host: smtp-mail.outlook.com
+    port: 587
+    username: email@email.com
+    password: password
+    remetente: Autenticacao
