@@ -17,7 +17,7 @@
 
 ## **Sobre o projeto**
 
-API desenvolvida em Spring Boot para cadastro e autenticação de usuários. Neste projeto os dados de usuários serão gravados no banco de dados MongoDB, assim como a lista de envio de e-mails de recuperação de senha. 
+API desenvolvida em Spring Boot para cadastro e autenticação de usuários. Neste projeto os dados de usuários serão gravados no banco de dados MongoDB, assim como a lista de envio de e-mails de recuperação de senha. Repositório da interface: https://github.com/ViniciusHP/autenticacao-ui 
 
 ## **Executando o projeto**
 
